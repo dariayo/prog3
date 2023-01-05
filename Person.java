@@ -8,15 +8,12 @@ abstract class Person {
     protected Gender gender;
     protected Status status;
 
-    protected HashSet<String> knowledge;
-
     public Person(String name,int health,int age,Gender gender,Status status){
         this.name=name;
         this.health=health;
         this.age=age;
         this.gender=gender;
         this.status=status;
-        this.knowledge = new HashSet<String>();
     }
     public String getName() {
         return name;
