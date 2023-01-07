@@ -10,10 +10,10 @@ abstract class Person {
 
     public Person(String name, int health, int age, Gender gender, Status status) {
         this.name = name;
-        //this.health = health;
-        //this.age = age;
+        this.health = health;
+        this.age = age;
         this.gender = gender;
-        //this.status = status;
+        this.status = status;
     }
 
 
