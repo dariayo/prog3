@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         Louis louis = new Louis();
-        final Pascoe pascoe = new Pascoe();
-        louis.toThink(Item.CASE,pascoe);
+        Pascoe pascoe = new Pascoe();
+        Pascoe deadpascoe = new Pascoe();
+        louis.toThink(Item.CASE,deadpascoe); // Так возраст у Паскоу меняться не будет
     }
 }
