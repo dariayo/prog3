@@ -29,7 +29,7 @@ public class Louis extends Person implements toArrive, Sayable {
                 pascoe.status = status.DEAD;
                 pascoe.name = "Dead " + pascoe.getName();
             }
-        } else if (item == null || pascoe != pascoe) {
+        } else if (item == null) {
             System.out.println("Я ни о чем не думаю");
         }
     }
