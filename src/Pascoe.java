@@ -4,11 +4,13 @@ public class Pascoe extends Person implements toArrive {
     }
 
     @Override
-    public void arrive(Places places2) {
-        this.places = places2;
+    public void arrive(Places places) {
+        this.places = places;
+        System.out.println(name + " прибыл в " + this.places.getDescription());
     }
 
     public void toFly() {
-        this.places = Places.BERGENFIELD;
+        setLocation(Places.BERGENFIELD);
+        System.out.println(name + " улетел в " + places.getDescription());
     }
 }
