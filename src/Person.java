@@ -1,4 +1,3 @@
-import static java.lang.Math.*;
 abstract class Person {
     protected String name;
     protected int health;
@@ -21,12 +20,23 @@ abstract class Person {
         return name;
     }
 
+
+    @Override
     public String toString() {
-        return "Персонаж " + name;
+        return "Person{"
+                + "Имя: '" + name + '\''
+                + ", возраст: " + age
+                + ", состояние: " + status
+                + '}';
+
     }
 
     public Places getLocation(Places places) {
-        return this.places=places;
+        return places;
+    }
+
+    public void setLocation(Places places) {
+        this.places = places;
     }
 
     @Override
@@ -39,6 +49,12 @@ abstract class Person {
         }
         Person person = (Person) object;
         return name.equals(person.name) && super.equals(person);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return 10 * name.hashCode() + 20456;
     }
 
 }
