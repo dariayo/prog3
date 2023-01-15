@@ -21,7 +21,6 @@ public class Louis extends Person implements toArrive, Sayable {
             pascoe.age = (int) (pascoe.age + Math.random() * 50);
             pascoe.setLocation(Places.LUDLOW);
             this.status.setStatus(Status.SEARCH);
-            //System.out.println(pascoe.age);
 
             Animal.CAT.getLocation(Places.CEMETRY);
             Animal.DOG.getLocation(Places.CEMETRY);
