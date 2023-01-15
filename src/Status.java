@@ -12,10 +12,6 @@ public enum Status {
         this.title = title;
     }
 
-    public Status getStatus(Status status) {
-        return status;
-    }
-
     public void setStatus(Status status) {
         this.status = status;
     }
