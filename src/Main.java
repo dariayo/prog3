@@ -29,5 +29,6 @@ public class Main {
         Pathologist pathologist = new Pathologist();
         louis.SayAbout("Патологоанатом");
         pathologist.toSuggest(pascoe);
+        System.out.println(pathologist.SayAbout("Луис"));
     }
 }
