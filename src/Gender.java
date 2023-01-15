@@ -7,7 +7,4 @@ public enum Gender {
         this.NameGender = name;
     }
 
-    public String getNameGender() {
-        return NameGender;
-    }
 }
