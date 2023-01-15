@@ -9,7 +9,7 @@ public class Louis extends Person implements toArrive, Sayable {
         if (personName.equals("Патологоанатом")) {
             return "У вас наш студент, Виктор Паскоу";
         }
-        if (personName.equals("Патологоанатом") && this.status == Status.SHOCKED) {
+        else if (personName.equals("Патологоанатом") && this.status == Status.SHOCKED) {
             return "Что?";
         } else {
             return "Даже не знаю, что и сказать";
