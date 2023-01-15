@@ -54,7 +54,7 @@ abstract class Person {
     @Override
     public int hashCode() {
 
-        return 10 * name.hashCode() + 20456;
+        return name.hashCode();
     }
 
 }
