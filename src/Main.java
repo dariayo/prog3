@@ -27,6 +27,7 @@ public class Main {
         father.arrive(Places.BERGENFIELD);
 
         Pathologist pathologist = new Pathologist();
+        louis.SayAbout("Патологоанатом");
         pathologist.toSuggest(pascoe);
     }
 }
