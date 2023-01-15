@@ -1,6 +1,6 @@
 public enum Animal  {
-    CAT("кошку"),
-    DOG("cобаку");
+    CAT("кошка"),
+    DOG("cобака");
     private String title;
     protected Places places;
     public Places getLocation(Places places){
