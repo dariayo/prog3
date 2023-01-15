@@ -30,7 +30,7 @@ public class Main {
         Father father = new Father();
         father.getLocation(Places.NEWARK);
         father.arrive(Places.BERGENFIELD);
-        System.out.println(father.SayAbout("Паскоу"));
+        father.SayAbout("Паскоу");
     }
 }
 
