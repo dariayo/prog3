@@ -51,10 +51,4 @@ abstract class Person {
         return name.equals(person.name) && super.equals(person);
     }
 
-    @Override
-    public int hashCode() {
-
-        return name.hashCode();
-    }
-
 }
