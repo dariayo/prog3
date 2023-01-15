@@ -12,8 +12,8 @@ public class Main {
         louis.toDrum(Item.TABLE);
 
         Pascoe pascoe = new Pascoe();
-        //Pascoe pascoeInMind = new Pascoe();
-        louis.toThink(Item.CASE, pascoe);
+        Pascoe pascoeInMind = new Pascoe();
+        louis.toThink(Item.CASE,pascoeInMind);
         pascoe.toFly();
 
         Funeralguy funeralguy = new Funeralguy();
@@ -28,6 +28,5 @@ public class Main {
 
         Pathologist pathologist = new Pathologist();
         pathologist.toSuggest(pascoe);
-        //louis.toThink(Item.CASE,pascoeInMind);
     }
 }
