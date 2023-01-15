@@ -13,11 +13,16 @@ public class Main {
 
         Pascoe pascoe = new Pascoe();
         Pascoe pascoeInMind = new Pascoe();
-        louis.toThink(Item.CASE,pascoeInMind);
+        louis.toThink(Item.CASE, pascoeInMind);
         pascoe.toFly();
 
         Funeralguy funeralguy = new Funeralguy();
         funeralguy.arrive(Places.MORGUE);
+
+        Pathologist pathologist = new Pathologist();
+        System.out.println(louis.SayAbout("Патологоанатом"));
+        System.out.println(pathologist.SayAbout("Луис"));
+        pathologist.toSuggest(pascoe);
 
         Ridgewick ridgewick = new Ridgewick();
         ridgewick.toOpen(pascoe);
@@ -25,10 +30,6 @@ public class Main {
         Father father = new Father();
         father.getLocation(Places.NEWARK);
         father.arrive(Places.BERGENFIELD);
-
-        Pathologist pathologist = new Pathologist();
-        louis.SayAbout("Патологоанатом");
-        pathologist.toSuggest(pascoe);
-        System.out.println(pathologist.SayAbout("Луис"));
     }
 }
+
