@@ -1,8 +1,6 @@
 public enum Gender {
     MAN("Мужчина"),
-    WOMEN("Женщина"),
-    CORPSE("Труп"),
-    ANIMAL("Животное");
+    WOMEN("Женщина");
     private String NameGender;
 
     Gender(String name) {
