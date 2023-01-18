@@ -14,7 +14,7 @@ public class Pathologist extends Person implements Sayable {
 
     @Override
     public String sayAbout(String personName) {
-        if (personName.equals("Луис")) {
+        if (personName.equals("Луис") && personName.hashCode()=="Луис".hashCode()) {
             return "У нас его нет";
         } else {
             return "Даже не знаю, что и сказать";
