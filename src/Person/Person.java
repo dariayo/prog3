@@ -54,6 +54,10 @@ abstract class Person {
         Person person = (Person) object;
         return name.equals(person.name) && super.equals(person);
     }
+    @Override
+    public int hashCode(){
+        return Objects.hash(name,health,age,places,gender,status);
+    }
 
 
 }
