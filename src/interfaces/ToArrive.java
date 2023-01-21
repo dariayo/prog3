@@ -1,5 +1,5 @@
-package Interfaces;
-import Enum.*;
+package interfaces;
+import enums.*;
 
 public interface ToArrive {
      void arrive(Places places);
