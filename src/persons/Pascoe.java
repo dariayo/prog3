@@ -1,7 +1,7 @@
-package Person;
+package persons;
 
-import Enum.*;
-import Interfaces.*;
+import enums.*;
+import interfaces.*;
 
 public class Pascoe extends Person implements ToArrive {
     public Pascoe() {
