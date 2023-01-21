@@ -1,6 +1,6 @@
-package Person;
+package persons;
 
-import Enum.*;
+import enums.*;
 
 public class Ridgewick extends Person {
     public Ridgewick() {
