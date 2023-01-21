@@ -1,5 +1,5 @@
-import Enum.*;
-import Person.*;
+import enums.*;
+import persons.*;
 
 public class Main {
     public static void main(String[] args) {
