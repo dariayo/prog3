@@ -1,7 +1,7 @@
-package Person;
+package persons;
 
-import Enum.*;
-import Interfaces.*;
+import enums.*;
+import interfaces.*;
 
 public class Funeralguy extends Person implements ToArrive {
     public Funeralguy() {
