@@ -1,6 +1,6 @@
-package Person;
+package persons;
 
-import Enum.*;
+import enums.*;
 
 abstract class Person {
     protected String name;
