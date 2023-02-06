@@ -12,8 +12,8 @@ public class Main {
             louis.eat(Item.COCACOLA);
         } catch (IllegalFoodException e) {
             System.out.println(e.getMessage());
-        } catch (UnrealHealthException che) {
-            System.out.println(che.getMessage());
+        } catch (UnrealHealthException check) {
+            System.out.println(check.getMessage());
         }
         louis.toThrew(Item.TRASH, Places.TABLE);
         louis.toDrum(Item.TABLE);
@@ -54,8 +54,8 @@ public class Main {
             guy.eat(Item.BEER);
         } catch (IllegalFoodException e) {
             System.out.println(e.getMessage());
-        } catch (UnrealHealthException che) {
-            System.out.println(che.getMessage());
+        } catch (UnrealHealthException check) {
+            System.out.println(check.getMessage());
         }
         
     }
