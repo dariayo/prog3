@@ -27,7 +27,7 @@ public class Guy extends Person implements ToArrive {
     }
 
     @Override
-    public void arrive(Places places) {
+    public void arrive(Places places) throws IllegalLocationException {
         this.places = getLocation(places);
         if (places == Places.BUCKET || places == Places.TABLE) {
             throw new IllegalLocationException(" невозможная локация для человека");
