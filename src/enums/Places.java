@@ -6,6 +6,7 @@ public enum Places {
     LUDLOW("Ладлоу"),
     BERGENFIELD("Бергенфилд"),
     CABINET("кабинет"),
+    GRANDFOLLS("Гранд-Фоллс"),
     NEWARK("Ньюарк"),
     CEMETRY("кладбище"),
     CAFE("кафе"),
