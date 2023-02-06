@@ -4,6 +4,7 @@ public enum Item {
     COCACOLA("кока-кола"),
     SANDWICH("сэндвич с тунцом"),
     TABLE("стол"),
+    BEER("пиво"),
     CASE("дело"),
     TRASH("мусор");
     private String title;
