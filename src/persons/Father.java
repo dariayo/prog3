@@ -1,6 +1,7 @@
 package persons;
 
 import enums.*;
+import exceptions.IllegalLocationException;
 import interfaces.*;
 
 public class Father extends Person implements ToArrive, Sayable {
@@ -18,8 +19,11 @@ public class Father extends Person implements ToArrive, Sayable {
     }
 
     @Override
-    public void arrive(Places places) {
+    public void arrive(Places places) throws IllegalLocationException {
         this.setLocation(places);
+        if (places==Places.BUCKET || places==Places.TABLE){
+            throw new IllegalLocationException(" невозможная локация для человека");
+        }
         System.out.println(name + " прибыл в " + places.getDescription());
     }
 }
