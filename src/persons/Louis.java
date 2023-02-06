@@ -1,6 +1,7 @@
 package persons;
 
 import enums.*;
+import exceptions.*;
 import interfaces.*;
 
 public class Louis extends Person implements ToArrive, Sayable {
