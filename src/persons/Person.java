@@ -1,6 +1,9 @@
 package persons;
 
 import enums.*;
+import exceptions.*;
+
+import java.util.Objects;
 
 abstract class Person {
     protected String name;
@@ -54,10 +57,58 @@ abstract class Person {
         Person person = (Person) object;
         return name.equals(person.name) && super.equals(person);
     }
+    
     @Override
     public int hashCode(){
         return Objects.hash(name,health,age,places,gender,status);
     }
+    
+    public String eat(Item food) throws IllegalFoodException, UnrealHealthException {
+        if (health < 50) {
+            health = health + 10;
+            return name + " съел " + food.getTitle();
+        } else if (this.health < 0) {
+            throw new UnrealHealthException("Здоровье ниже нуля!");
+        } else if (food == Item.TABLE || food == Item.CASE || food == Item.TRASH) {
+            throw new IllegalFoodException("Человек не может есть несъедобные предметы");
+        }
+        return "Я не голодный";
+    }
+    
+    public void toDie() {
+        if (this.health == 0){
+            class Die { // локальный класс
+                final String die = "смерть";
+                public void occured() {
+                    System.out.println(die + " наступила у " + name);
+                }
+            }
+            Die die = new Die();
+            die.occured();
+            this.status.setStatus(Status.DEAD);
+        } else {
+            System.out.println("Все в порядке");
+        }
+    }
+    
+    public static class Guarantee {
+        private String guarantee = "гарантия";
 
+        public void give() {
+            System.out.println("дать " + guarantee);
+        }
 
+        public void notGive() {
+            System.out.println("нельзя дать " + guarantee);
+        }
+    }
+
+    public void giveGuarantee(int period) {
+        Guarantee guarantee = new Guarantee();
+        if (period < 1) {
+            guarantee.give();
+        } else {
+            guarantee.notGive();
+        }
+    }
 }
