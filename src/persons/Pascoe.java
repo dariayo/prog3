@@ -20,8 +20,10 @@ public class Pascoe extends Person implements ToArrive {
     }
 
     public void toFly() {
-        setLocation(Places.BERGENFIELD);
-        System.out.println(name + " улетел в " + places.getDescription());
+        if (this.places == Places.PLANE) {
+            setLocation(Places.BERGENFIELD);
+            System.out.println(name + " улетел в " + places.getDescription());
+        }
     }
 
 }
