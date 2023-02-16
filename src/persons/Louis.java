@@ -31,7 +31,7 @@ public class Louis extends Person implements ToArrive, Sayable {
             Animal.DOG.getLocation(Places.CEMETRY);
 
             if (pascoe.health == 0) {
-                pascoe.status = status.DEAD;
+                pascoe.toDie();
                 pascoe.name = "Dead " + pascoe.getName();
             }
         } else if (item == null) {
@@ -56,16 +56,18 @@ public class Louis extends Person implements ToArrive, Sayable {
         return "Я не голодный";
     }
 
-    public void toThrew(Item item, Places places) {
-        if (item == Item.TRASH & places == Places.TABLE) {
-            item.getLocation(Places.BUCKET);
+    public void toThrew(Item item) {
+        if (item.property == "можно утилизировать" && item.size <= item.BUCKET.size) {
+            item.changeLocation(Places.BUCKET);
             System.out.println(name + " " + item.getTitle() + " выбросил в " + item.places.getDescription());
         } else {
             System.out.println(" ничего не сделал ");
         }
     }
 
-    public String toDrum(Item item) {
-        return name + " побарабанил по " + item.getTitle();
+    public void toDrum(Item item) {
+        if (item.property.equals("имеет аккустику")) {
+            System.out.println(name + " побарабанил по " + item.getTitle());
+        }
     }
 }
