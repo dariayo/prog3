@@ -63,7 +63,7 @@ abstract class Person {
         return Objects.hash(name,health,age,places,gender,status);
     }
     
-    public void eat(Item food) throws IllegalFoodException, UnrealHealthException {
+    public void eat(Food food) throws IllegalFoodException, UnrealHealthException {
         if (food.calories >= 150 && food.calories <= 1000) {
             hthis.health += health / 2;
             this.caloriesEaten += food.calories;
