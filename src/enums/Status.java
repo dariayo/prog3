@@ -8,7 +8,6 @@ public enum Status {
     SEARCH("В поиске"),
     UNBROKEN("Не разложен"),
     BROKEN("Разложен"),
-    PUMP("Накачен препаратом"),
     CALM("Спокоен");
     private String title;
     protected Status status;
