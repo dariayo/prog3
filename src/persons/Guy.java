@@ -17,6 +17,7 @@ public class Guy extends Person implements ToArrive {
                 public void save() {
                     String medicine = "препарат";
                     status.setStatus(Status.UNBROKEN);
+                    health+=15;
                     System.out.println(medicine + " сработал");
                 }
             };
