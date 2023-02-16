@@ -36,18 +36,32 @@ public class Guy extends Person implements ToArrive {
         System.out.println(name + " прибыл в " + this.places.getDescription());
     }
 
-    public class Friends { // вложенный класс
-        public void pump() {
+    public static class Friends { // вложенный статический класс
+        public void pump(Person person) {
             String friends = "друзья";
+            person.caloriesEaten += 10;
             System.out.println(friends + " закачали препарат");
         }
     }
+    public class Guarantee { //вложенный нестатический класс
+            private String guarantee = "гарантия";
 
-    public void bePump() {
-        Friends friends = new Friends();
-        if (this.health == 0) {
-            friends.pump();
-            this.status.setStatus(Status.PUMP);
+            public void give() {
+                System.out.println("дать " + guarantee);
+            }
+
+            public void notGive() {
+                System.out.println("нельзя дать " + guarantee);
+            }
+        }
+
+    public void giveGuarantee(int period) {
+        Guarantee guarantee = new Guarantee();
+        if (period < 1) {
+            guarantee.give();
+        } else {
+            guarantee.notGive();
         }
     }
+    
 }
