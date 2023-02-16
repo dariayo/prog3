@@ -63,16 +63,23 @@ abstract class Person {
         return Objects.hash(name,health,age,places,gender,status);
     }
     
-    public String eat(Item food) throws IllegalFoodException, UnrealHealthException {
-        if (health < 50) {
-            health = health + 10;
-            return name + " съел " + food.getTitle();
-        } else if (this.health < 0) {
-            throw new UnrealHealthException("Здоровье ниже нуля!");
-        } else if (food == Item.TABLE || food == Item.CASE || food == Item.TRASH) {
-            throw new IllegalFoodException("Человек не может есть несъедобные предметы");
+    public void eat(Item food) throws IllegalFoodException, UnrealHealthException {
+        if (food.calories >= 150 && food.calories <= 1000) {
+            hthis.health += health / 2;
+            this.caloriesEaten += food.calories;
+            if (this.health > 100) {
+                throw new UnrealHealthException("Здоровье не может быть больше 100");
+            }
+        } else if (food.calories > normOfCalories || this.caloriesEaten > normOfCalories) {
+            this.health -= 10;
+            if (this.health == 0) {
+                this.toDie();
+            }
+            throw new IllegalFoodException("Нельзя столько есть");
+        } else {
+            this.health += health / 5;
+            this.caloriesEaten += food.calories;
         }
-        return "Я не голодный";
     }
     
     public void toDie() {
@@ -91,24 +98,5 @@ abstract class Person {
         }
     }
     
-    public static class Guarantee {
-        private String guarantee = "гарантия";
-
-        public void give() {
-            System.out.println("дать " + guarantee);
-        }
-
-        public void notGive() {
-            System.out.println("нельзя дать " + guarantee);
-        }
-    }
-
-    public void giveGuarantee(int period) {
-        Guarantee guarantee = new Guarantee();
-        if (period < 1) {
-            guarantee.give();
-        } else {
-            guarantee.notGive();
-        }
-    }
+    
 }
