@@ -1,9 +1,9 @@
 package enums;
 
 public enum Food {
-    COCACOLA("кока-кола",250),
-    BEER("пиво",110),
-    SANDWICH("сэндвич с тунцом",500);
+    COCACOLA("кока-кола", 250),
+    BEER("пиво", 110),
+    SANDWICH("сэндвич с тунцом", 500);
     private String title;
     public int calories;
 
