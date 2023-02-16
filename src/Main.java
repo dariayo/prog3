@@ -8,50 +8,45 @@ public class Main {
         louis.arrive(Places.CAFE);
         louis.arrive(Places.CABINET);
         try {
-            System.out.println(louis.eat(Item.SANDWICH));
-            louis.eat(Item.COCACOLA);
-        } catch (IllegalFoodException e) {
-            System.out.println(e.getMessage());
+            louis.eat(Food.SANDWICH);
+            louis.eat(Food.COCACOLA);
         } catch (UnrealHealthException check) {
             System.out.println(check.getMessage());
         }
-        louis.toThrew(Item.TRASH, Places.TABLE);
+        louis.toThrew(Item.TRASH);
         louis.toDrum(Item.TABLE);
 
         Pascoe pascoe = new Pascoe();
         Pascoe pascoeInMind = new Pascoe();
         louis.toThink(Item.CASE, pascoeInMind);
-        try {
-            pascoe.arrive(Places.BERGENFIELD);
-            pascoe.toFly();
+        pascoe.arrive(Places.BERGENFIELD);
+        pascoe.toFly();
 
-            Funeralguy funeralguy = new Funeralguy();
-            funeralguy.arrive(Places.MORGUE);
+        Funeralguy funeralguy = new Funeralguy();
+        funeralguy.arrive(Places.MORGUE);
 
-            Pathologist pathologist = new Pathologist();
-            System.out.println(louis.sayAbout("Патологоанатом"));
-            System.out.println(pathologist.sayAbout("Луис"));
-            pathologist.toSuggest(pascoe);
+        Pathologist pathologist = new Pathologist();
+        System.out.println(louis.sayAbout("Патологоанатом"));
+        System.out.println(pathologist.sayAbout("Луис"));
+        pathologist.toSuggest(pascoe);
 
-            Ridgewick ridgewick = new Ridgewick();
-            ridgewick.toOpen(pascoe);
+        Ridgewick ridgewick = new Ridgewick();
+        ridgewick.toOpen(pascoe);
 
-            Father father = new Father();
-            father.getLocation(Places.NEWARK);
-            father.arrive(Places.BERGENFIELD);
-            father.sayAbout("Паскоу");
-        } catch (IllegalLocationException e) {
-            System.out.println(e.getMessage());
-        }
+        Father father = new Father();
+        father.getLocation(Places.NEWARK);
+        father.arrive(Places.BERGENFIELD);
+        father.sayAbout("Паскоу");
         
         Guy guy = new Guy();
+        Guy.Friends friends = new Guy.Friends();
+        guy.toDie();
+        friends.pump(guy);
+        friends.giveGuarantee(3);
+        guy.toSave();
+        guy.arrive(Places.NORTHLUDLOW);
         try {
-            guy.toDie();
-            guy.bePump();
-            guy.giveGuarantee(3);
-            guy.toSave();
-            guy.arrive(Places.GRANDFOLLS);
-            guy.eat(Item.BEER);
+            guy.eat(Food.BEER);
         } catch (IllegalFoodException e) {
             System.out.println(e.getMessage());
         } catch (UnrealHealthException check) {
