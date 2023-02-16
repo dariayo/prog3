@@ -42,25 +42,26 @@ public class Guy extends Person implements ToArrive {
             person.caloriesEaten += 10;
             System.out.println(friends + " закачали препарат");
         }
-    }
-    public class Guarantee { //вложенный нестатический класс
-            private String guarantee = "гарантия";
+        private String guarantee = "гарантия";
+        public class Guarantee { //вложенный нестатический класс
+                private String guarantee = "гарантия";
 
-            public void give() {
-                System.out.println("дать " + guarantee);
+                public void give() {
+                    System.out.println("дать " + guarantee);
+                }
+
+                public void notGive() {
+                    System.out.println("нельзя дать " + guarantee);
+                }
             }
 
-            public void notGive() {
-                System.out.println("нельзя дать " + guarantee);
+        public void giveGuarantee(int period) {
+            Guarantee guarantee = new Guarantee();
+            if (period < 1) {
+                guarantee.give();
+            } else {
+                guarantee.notGive();
             }
-        }
-
-    public void giveGuarantee(int period) {
-        Guarantee guarantee = new Guarantee();
-        if (period < 1) {
-            guarantee.give();
-        } else {
-            guarantee.notGive();
         }
     }
     
