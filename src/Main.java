@@ -40,11 +40,6 @@ public class Main {
         
         Guy guy = new Guy();
         Guy.Friends friends = new Guy.Friends();
-        guy.toDie();
-        friends.pump(guy);
-        friends.giveGuarantee(3);
-        guy.toSave();
-        guy.arrive(Places.NORTHLUDLOW);
         try {
             guy.eat(Food.BEER);
         } catch (IllegalFoodException e) {
@@ -52,6 +47,11 @@ public class Main {
         } catch (UnrealHealthException check) {
             System.out.println(check.getMessage());
         }
+        guy.toDie();
+        friends.pump(guy);
+        friends.giveGuarantee(3);
+        guy.toSave();
+        guy.arrive(Places.NORTHLUDLOW);
         
     }
 }
